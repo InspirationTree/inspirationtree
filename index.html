@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta property="og:title" content="Concept Decomposition for Visual Exploration and Inspiration"/>
+  <meta property="og:url" content=""/>
+  <meta property="og:image" content="static/images/og_tag_header_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <title>Concept Decomposition for Visual Exploration and Inspiration <img src="static/figures/icons/trees.png" style="width: 36px"> </title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+  <link rel="icon" href="static/figures/icon2.png">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="publication-header">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <!-- <div class="columns is-centered"> -->
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Concept Decomposition for Visual Exploration and Inspiration</h1>
+        </div>
+    </div>
+  </div>   
+</section>
+
+<section class="publication-author-block">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous Authors</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="source/paper.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              
+              <span class="link-block">
+                <a href="" target="_blank"
+                class="external-link button is-normal is-rounded">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code (soon)</span>
+              </a>
+              </span>
+             
+           
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <!-- <div class="hero-body"> -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+      <div class="container">
+      <div class="item">
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/teaser_test1_bear.png" alt="teaser"/>
+      </div>
+      <h2 class="content has-text-justified">
+        <br>
+        Our method provides a tree-structured visual exploration space for a given unique concept. The nodes of the tree ("<math><mi>v_i</mi></math>") are newly learned textual vector embeddings, injected to the latent space of a pretrained text-to-image model.
+        The nodes encode different <i>aspects</i> of the subject of interest. 
+        Through examining combinations within and across trees, the different aspects can inspire the creation of new designs and concepts, as can be seen below.
+      </h2>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/text_bear_example.png" alt="teaser"/>
+      </div>
+    </div>
+  </div>
+ <!--  </div> -->
+  </div>
+  </div>
+ <!--  </div> -->
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="item">
+          <p style="margin-bottom: 30px">
+        <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <source src="static/figures/sketchy_video.mp4"
+          type="video/mp4">
+        </video> -->
+        </p>
+        </div>
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            A creative idea is often born from transforming, combining, and modifying ideas from existing visual examples capturing various concepts.
+            However, one cannot simply copy the concept as a whole, and inspiration is achieved by examining certain aspects of the concept. Hence, it is often necessary to separate a concept into different aspects to provide new perspectives.
+
+            In this paper, we propose a method to decompose a visual concept, represented as a set of images, into different visual <i>aspects</i> encoded in a hierarchical tree structure. We utilize large vision-language models and their rich latent space for concept decomposition and generation. 
+            Each node in the tree represents a sub-concept using a learned vector embedding injected into the latent space of a pretrained text-to-image model. We use a set of regularizations to guide the optimization of the embedding vectors encoded in the nodes to follow the hierarchical structure of the tree.
+            Our method allows to explore and discover new concepts derived from the original one. The tree provides the possibility of endless visual sampling at each node, allowing the user to explore the hidden sub-concepts of the object of interest.
+            The learned aspects in each node can be combined within and across trees to create new visual ideas, and can be used in natural language sentences to apply such aspects to new designs.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+    <!-- <div class="container"> -->
+      <h2 class="title has-text-centered">Examples of exploration trees <img src="static/figures/icons/trees.png" style="width: 36px"></h2>
+      <div id="results-carousel" class="carousel results-carousel">
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/trees/tree_round_bird.png" width="600" alt="tree"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/trees/cat_tree_explore.png" width="600" alt="tree"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/trees/tree_red_teapot.png" width="600" alt="tree"/>
+      </div>
+      
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/trees/mug_tree_explore.png" width="600" alt="cars peace"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/trees/tree_wooden_pot.png" width="600" alt="cars peace"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/trees/one_level_trees_mugs.png" width="600" alt="cars peace"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/trees/teapot_tree_explore.png" width="600" alt="cars peace"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/trees/one_level_tree_green.png" width="600" alt="cars peace"/>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/trees/tree_elephant.png" width="600" alt="cars peace"/>
+      </div>
+     
+    
+  </div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How does it work?</h2>
+        <div class="content has-text-justified">
+          <p>
+            Given a small set of images depicting the desired visual concept, our goal is to construct a rich visual exploration space expressing different aspects of the input concept.
+            We model the exploration space as a binary tree, whose nodes are learned vector embeddings corresponding to newly discovered words added to the predefined dictionary, representing different aspects of the original concept. 
+            The exploration tree is built gradually as a binary tree from top to bottom, where we iteratively add two new nodes at a time.
+          </p>
+        </div>
+        <div class="column is-centered has-text-centered">
+        <img src="static/figures/pipeline.png" alt="pipeline"/>
+      </div>
+        <div class="content has-text-justified">
+          <p>
+            
+        To create two child nodes, we optimize new embedding vectors according to the input image-set generated from the concept depicted in the parent node.
+        During construction, we define two requirements to encourage the learned embeddings to follow the tree structure: <br> <b>(1) Binary Reconstruction</b> each pair of children nodes together should encapsulate the concept depicted by their parent node, and <b>(2) Coherency </b> each individual node should depict a coherent concept which is distinct from its sibling. Next, we describe the loss functions and procedures designed to follow these requirements. <br> <br>
+        The constructed tree provides a rich visual exploration space for concepts related to the object of interest.
+        We next demonstrate how this space can be used for novel combination and exploration. <br> <br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section> 
+
+
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <!-- <h2 class="title has-text-centered">Applications</h2> -->
+        <!-- <div class="content has-text-justified">
+          <p>
+            The constructed tree provides a rich visual exploration space for concepts related to the object of interest.
+            We next demonstrate how this space can be used for novel combination and exploration. <br> <br>
+          </p>
+        </div> -->
+        <h2 class="title has-text-centered">1. Intra-tree combination</h2>
+        <div class="content has-text-justified">
+          <p>
+            We can explore combinations of different aspects by composing sentences containing different subsets of the nodes. For example, below we have combined $v_1$ and $v_5$, which resulted in a variation of the original sculpture without the sub-concept relating to the cat (depicted in $v_6$). At the bottom right, we have excluded the sub-concept depicted in $v_5$ (related to a blue sculpture), which resulted in a new representation of a flat cat with the body and texture of the original object.
+          </p>
+        </div>
+
+        <div id="results-carousel" class="carousel results-carousel">
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/intra_cat.png" width="700" class="is-centered"/>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/intra_mug.png" width="700" class="is-centered"/>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/intra_buddha.png" width="700" class="is-centered"/>
+        </div>
+        
+
+        </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <!-- <h2 class="title has-text-centered">Applications</h2> -->
+        <!-- <div class="content has-text-justified">
+          <p>
+            The constructed tree provides a rich visual exploration space for concepts related to the object of interest.
+            We next demonstrate how this space can be used for novel combination and exploration. <br> <br>
+          </p>
+        </div> -->
+        <h2 class="title has-text-centered">2. Inter-tree combination</h2>
+        <div class="content has-text-justified">
+          <p>
+            It is also possible to combine concepts learned across different trees.
+            To achieve this, we first build the trees independently for each concept and then visualize the sub-concepts depicted in the nodes to select interesting combinations. We demonstrate this below:
+          </p>
+        </div>
+
+        <div id="results-carousel" class="carousel results-carousel">
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/inter_bear_mug.png" width="700" class="is-centered"/>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/inter_bud_cat.png" width="700" class="is-centered"/>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/inter_cat_teapot.png" width="500" class="is-centered"/>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/inter_woodenpot_elephant.png" width="500" class="is-centered"/>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/inter_woodenpot_teapot.png" width="500" class="is-centered"/>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/inter_catstyle_bud.png" width="500" class="is-centered"/>
+        </div>
+        
+        </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <!-- <h2 class="title has-text-centered">Applications</h2> -->
+        <!-- <div class="content has-text-justified">
+          <p>
+            The constructed tree provides a rich visual exploration space for concepts related to the object of interest.
+            We next demonstrate how this space can be used for novel combination and exploration. <br> <br>
+          </p>
+        </div> -->
+        <h2 class="title has-text-centered">3. Text-based generation</h2>
+        <div class="content has-text-justified">
+          <p>
+            The placeholder words of the learned embeddings can be composed into natural language sentences to generate various scenes based on the learned aspects.
+          </p>
+        </div>
+
+        <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/text_edit_multiple.png" width="600" class="is-centered"/>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/catv1_text_based.png" width="600" class="is-centered"/>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/catv2_text_based.png" width="600" class="is-centered"/>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/catv3_text_based.png" width="600" class="is-centered"/>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/bearv1_text_based.png" width="600" class="is-centered"/>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/bearv2_text_based.png" width="600" class="is-centered"/>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <img src="static/figures/bearv3_text_based.png" width="600" class="is-centered"/>
+        </div>
+
+        </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code></code></pre>
+    </div>
+</section>
+
+
+
+<footer class="footer">
+ <!--  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+      href="https://homes.cs.washington.edu/~kpar/nerfies/videos/nerfies_paper.pdf">
+      <i class="fas fa-file-pdf"></i>
+    </a>
+    <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <i class="fab fa-github"></i>
+    </a>
+  </div> -->
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
+        <p>
+          This website is licensed under a <a rel="license"
+          href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+        Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+      <p>
+        Website source code based on the <a href="https://nerfies.github.io/"> Nerfies</a> project page. If you want to reuse their <a
+        href="https://github.com/nerfies/nerfies.github.io">source code</a>, please credit them appropriately.
+      </p>
+
+<a href="https://www.flaticon.com/free-icons/forest" title="forest icons">Forest icons created by Freepik - Flaticon</a>
+    </div>
+  </div>
+</div>
+</div>
+</footer>
+
+
+  <script type="text/javascript">
+    var sc_project=12351448; 
+    var sc_invisible=1; 
+    var sc_security="c676de4f"; 
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="Web Analytics"
+    href="https://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="https://c.statcounter.com/12351448/0/c676de4f/1/"
+    alt="Web Analytics"></a></div></noscript>
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
